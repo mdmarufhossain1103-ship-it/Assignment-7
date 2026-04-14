@@ -8,6 +8,7 @@ import Home from './pages/home/Home';
 import Timeline from './pages/timeline/Timeline';
 import Status from './pages/status/Status';
 import ErrorPage from './pages/error/ErrorPage';
+import Details from './pages/details/Details';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { index: true, element:<Home></Home> },
       { path: "/timeline", element:<Timeline></Timeline> },
       { path: "/status", element: <Status></Status> },
+      { path: "/details/:id", element: <Details></Details> },
     ],
   },
 ]);
