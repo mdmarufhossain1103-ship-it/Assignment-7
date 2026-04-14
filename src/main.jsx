@@ -9,6 +9,7 @@ import Timeline from './pages/timeline/Timeline';
 import Status from './pages/status/Status';
 import ErrorPage from './pages/error/ErrorPage';
 import Details from './pages/details/Details';
+import ContextProvider from './components/context/ContextProvider';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ContextProvider>
     <RouterProvider router={router} />
+    </ContextProvider>
   </StrictMode>,
 )
