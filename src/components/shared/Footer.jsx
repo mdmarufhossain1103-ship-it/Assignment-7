@@ -6,7 +6,7 @@ import twitter from '../../assets/twitter.png'
 const Footer = () => {
     return (
         <div className='bg-[#244D3F]'>
-            <div className='max-w-[80%] mx-auto p-25 text-center'>
+            <div className='container mx-auto p-25 text-center'>
                 <div>
                     <h2 className='text-6xl font-bold text-white mb-10'>KeenKeeper</h2>
                     <p className='text-[#FFFFFF] mb-2'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
