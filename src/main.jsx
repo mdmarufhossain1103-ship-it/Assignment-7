@@ -7,11 +7,13 @@ import Root from './Root';
 import Home from './pages/home/Home';
 import Timeline from './pages/timeline/Timeline';
 import Status from './pages/status/Status';
+import ErrorPage from './pages/error/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       { index: true, element:<Home></Home> },
       { path: "/timeline", element:<Timeline></Timeline> },
