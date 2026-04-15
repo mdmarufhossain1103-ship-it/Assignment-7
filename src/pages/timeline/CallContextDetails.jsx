@@ -10,7 +10,7 @@ const CallContextDetails = () => {
             {
                 call.map(item =>{
                     return(
-                        <div key={item.id} className='shadow-sm p-3 flex items-center gap-2 rounded-sm mb-5'>
+                        <div key={item.id} className='shadow-xl p-3 flex items-center gap-2 rounded-sm mb-5'>
                                 <img src={callIcon} className='w-7' alt={'call image'} />
                                 <div>
                                 <h2><span className='text-[#244D3F] font-medium'>Call</span><span className='text-[#64748B]'> with {item.name}</span></h2>

@@ -16,7 +16,7 @@ const Status = () => {
     return (
         <div className='my-20 max-w-[80%] mx-auto'>
             <h2 className='text-5xl font-bold'>Friendship Analytics</h2>
-            <div className='mt-15 shadow-lg p-5'>
+            <div className='mt-15 shadow-xl p-5'>
                 <h2 className='text-[#244D3F] font-medium text-xl'>By Interaction Type</h2>
                 <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 , margin: 'auto'}} responsive>
                     <Pie

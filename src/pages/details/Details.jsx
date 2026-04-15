@@ -74,10 +74,10 @@ const Details = () => {
 
     // console.log(call,"Call");
 
-    return (
+        return (
         <div className='max-w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 my-30 gap-40'>
             <div>
-                <div className='flex flex-col items-center justify-center shadow-sm p-5 rounded-lg'>
+                <div className='flex flex-col items-center justify-center shadow-xl p-5 rounded-lg'>
                     <img className='w-15 h-15 rounded-full' src={expectedItem.picture} alt={expectedItem.name} />
                     <h2 className='text-2xl font-bold mt-3'>{expectedItem.name}</h2>
                     <p className={`font-medium mt-2  text-white px-3 py-1 rounded-full ${statusColor[expectedItem.status]}`}>{expectedItem.status}</p>
@@ -96,31 +96,31 @@ const Details = () => {
                     <p className='text-[#64748B]'>Preferred: email</p>
                 </div>
                 <div className='mt-5'>
-                    <p className='flex gap-2 items-center shadow-sm rounded-lg p-2 justify-center'><IoIosNotifications /> Snooze 2 weeks</p>
+                    <p className='flex gap-2 items-center shadow-xl rounded-lg p-2 justify-center cursor-pointer'><IoIosNotifications /> Snooze 2 weeks</p>
                 </div>
                 <div className='mt-5'>
-                    <p className='flex gap-2 items-center shadow-sm rounded-lg p-2 justify-center'><IoArchive /> Archive</p>
+                    <p className='flex gap-2 items-center shadow-xl rounded-lg p-2 justify-center cursor-pointer'><IoArchive /> Archive</p>
                 </div>
                 <div className='mt-5'>
-                    <p className='flex gap-2 items-center shadow-sm rounded-lg p-2 justify-center text-red-500'><MdDelete /> Delete</p>
+                    <p className='flex gap-2 items-center shadow-xl rounded-lg p-2 justify-center text-red-500 cursor-pointer'><MdDelete /> Delete</p>
                 </div>
             </div>
             <div>
                 <div className='grid grid-cols-3 gap-5 mb-20'>
-                    <div className='shadow-sm rounded-lg p-3 text-center md:whitespace-nowrap'>
+                    <div className='shadow-xl rounded-lg p-3 text-center md:whitespace-nowrap'>
                         <p className='font-bold'>{expectedItem.days_since_contact}</p>
                         <p className='text-[#64748B]'>Days Since Contact</p>
                     </div>
-                    <div className='shadow-sm rounded-lg p-3 text-center whitespace-nowrap'>
+                    <div className='shadow-xl rounded-lg p-3 text-center whitespace-nowrap'>
                         <p className='font-bold'>{expectedItem.goal}</p>
                         <p className='text-[#64748B]'>Goal (Days)</p>
                     </div>
-                    <div className='shadow-sm rounded-lg p-3 text-center whitespace-nowrap'>
+                    <div className='shadow-xl rounded-lg p-3 text-center whitespace-nowrap'>
                         <p className='font-bold'>{expectedItem.next_due_date}</p>
                         <p className='text-[#64748B]'>Next Due</p>
                     </div>
                 </div>
-                <div className='flex justify-between items-center shadow-sm rounded-lg p-3 mb-20'>
+                <div className='flex justify-between items-center shadow-xl rounded-lg p-3 mb-20'>
                     <div>
                         <h2 className='font-bold mb-7'>Relationship Goal</h2>
                         <p>Connect every <span className='font-bold'>{expectedItem.goal} days</span></p>
@@ -139,7 +139,7 @@ const Details = () => {
                 </div>
             </div>
         </div>
-    );
+        );
 };
 
 export default Details;

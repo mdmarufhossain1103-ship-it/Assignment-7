@@ -2,6 +2,7 @@ import React from 'react';
 import instragram from '../../assets/instagram.png';
 import facebook from '../../assets/facebook.png';
 import twitter from '../../assets/twitter.png'
+import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -12,9 +13,9 @@ const Footer = () => {
                     <p className='text-[#FFFFFF] mb-2'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                     <p className='text-[#FFFFFF] mb-2'>Social Links</p>
                     <div className='flex items-center justify-center gap-3 mb-5'>
-                        <img src={instragram} alt="Instragram image" />
-                        <img src={facebook} alt="Facebook image" />
-                        <img src={twitter} alt="Twitter image" />
+                        <Link><img src={instragram} alt="Instragram image" /></Link>
+                        <Link><img src={facebook} alt="Facebook image" /></Link>
+                        <Link><img src={twitter} alt="Twitter image" /></Link>
                     </div>
                 </div>
                 <div className='text-[#FFFFFF] border-t mt-3 flex justify-between'>
