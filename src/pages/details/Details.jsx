@@ -38,9 +38,10 @@ const Details = () => {
         const now = new Date();
         const month = now.toLocaleString('en-US', { month: 'long' });
         const time = now.toLocaleTimeString();
+        const year = now.getFullYear();
         const newCall = {
             ...expectedItem,
-            callTime: `${month} - ${time}`
+            callTime: `${month} - ${time} - ${year}`
         }
         // setCall ([...call,expectedItem])
         setCall([...call, newCall]);
@@ -51,9 +52,10 @@ const Details = () => {
         const now = new Date();
         const month = now.toLocaleString('en-US', { month: 'long' });
         const time = now.toLocaleTimeString();
+        const year = now.getFullYear();
         const newCall = {
             ...expectedItem,
-            textTime: `${month} - ${time}`
+            textTime: `${month} - ${time} - ${year}`
         }
         // setCall ([...call,expectedItem])
         setText([...text, newCall]);
@@ -64,9 +66,10 @@ const Details = () => {
         const now = new Date();
         const month = now.toLocaleString('en-US', { month: 'long' });
         const time = now.toLocaleTimeString();
+        const year = now.getFullYear();
         const newCall = {
             ...expectedItem,
-            videoTime: `${month} - ${time}`
+            videoTime: `${month} - ${time} - ${year}`
         }
         // setCall ([...call,expectedItem])
         setVideo([...video, newCall]);
@@ -75,13 +78,13 @@ const Details = () => {
     // console.log(call,"Call");
 
         return (
-        <div className='max-w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 my-30 gap-40'>
+            <div className='max-w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 my-30 gap-40'>
             <div>
                 <div className='flex flex-col items-center justify-center shadow-xl p-5 rounded-lg'>
                     <img className='w-15 h-15 rounded-full' src={expectedItem.picture} alt={expectedItem.name} />
                     <h2 className='text-2xl font-bold mt-3'>{expectedItem.name}</h2>
                     <p className={`font-medium mt-2  text-white px-3 py-1 rounded-full ${statusColor[expectedItem.status]}`}>{expectedItem.status}</p>
-                    <div className='flex justify-between w-full mt-2 font-medium'>
+                        <div className={`mt-2 font-medium ${expectedItem.tags.length === 2 ? 'flex justify-between w-full' : ''}`}>
                         {
                             expectedItem.tags.map((tag, index) => {
                                 return (

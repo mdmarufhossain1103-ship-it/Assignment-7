@@ -21,7 +21,7 @@ const AllCards = ({itemsPromise}) => {
                                     <img className='w-15 h-15 rounded-full' src={item.picture} alt={item.name} />
                                     <h2 className='text-2xl font-bold mt-3'>{item.name}</h2>
                                     <p className='text-[#64748B] mt-1'><small>{item.days_since_contact}d ago</small></p>
-                                    <div className='flex justify-between w-full mt-2 font-medium'>
+                                    <div className={`mt-2 font-medium ${item.tags.length === 2 ? 'flex justify-between w-full': ''}`}>
                                         {
                                             item.tags.map((tag, index) => {
                                                 return (

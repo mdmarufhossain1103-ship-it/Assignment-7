@@ -1,16 +1,24 @@
-# React + Vite
+# 👥 KeenKeeper — Keep Your Friendships Alive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Description
+KeenKeeper is a reletionship-management platform design to you maintain meaningful connections in a fast-paced world. It serves as a detected space to track interaction visualize friendship health, and ensure no important bond fades due to neglect.
 
-Currently, two official plugins are available:
+## 🛠️ Technologies to Use
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Technology | Purpose |
+|---|---|
+| **React.js** | Build the UI |
+| **React Router DOM** | Handle page navigation |
+| **Tailwind CSS+Daisyui** | Styling and responsiveness |
+| **Recharts** | Chart |
 
-## React Compiler
+# 3 key Features
+|--- | --- |
+1. HomePage.
+    The Homepage acts as your primary dashboard, displaying a comprehensive list of all tracked friendship. At a glance, you see recent activity, upcoming reminders, and high level summarise of your most valued connections, making it easy to decide who to reach out to next. Whenever you trigger a call, text or video chat directly throung the app, keenKeeper automatically logs the event.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Timeline
+    Never lose track to your history with the timeline features. These create a chronological of your outreach, allowing you to see exactly how and when you've been showing up for your friends.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Status
+    The status page transforms your raw interaction data into insignful visual chart.
