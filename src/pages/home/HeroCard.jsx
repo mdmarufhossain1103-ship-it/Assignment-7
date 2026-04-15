@@ -9,7 +9,7 @@ const HeroCard = () => {
                     <p className='text-[#64748B]'>Total Friends</p>
                 </div>
                 <div className='flex flex-col items-center justify-center p-[32px] shadow-xl rounded-2xl'>
-                    <h2 className='font-bold'>3</h2>
+                    <h2 className='font-bold'>4</h2>
                     <p className='text-[#64748B]'>On Track</p>
                 </div>
                 <div className='flex flex-col items-center justify-center p-[32px] shadow-xl rounded-2xl'>

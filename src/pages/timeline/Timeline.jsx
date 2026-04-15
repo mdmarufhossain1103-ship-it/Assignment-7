@@ -6,7 +6,7 @@ import VideoContextDetails from './VideoContextDetails';
 
 
 const Timeline = () => {
-    const [filter, setFilter] = useState('All')
+    const [filter, setFilter] = useState('Filter timeline')
     return (
         <div className='max-w-[80%] mx-auto my-20'>
             <div>

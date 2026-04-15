@@ -10,6 +10,7 @@ import Status from './pages/status/Status';
 import ErrorPage from './pages/error/ErrorPage';
 import Details from './pages/details/Details';
 import ContextProvider from './components/context/ContextProvider';
+import { ToastContainer} from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -30,5 +31,6 @@ createRoot(document.getElementById('root')).render(
     <ContextProvider>
     <RouterProvider router={router} />
     </ContextProvider>
+    <ToastContainer position="top-center" />
   </StrictMode>,
 )

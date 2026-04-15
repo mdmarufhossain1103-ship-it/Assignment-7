@@ -3,7 +3,7 @@ import React from 'react';
 const Status = () => {
     return (
         <div>
-            This is status page.
+            <h2>Friendship Analytics</h2>
         </div>
     );
 };
