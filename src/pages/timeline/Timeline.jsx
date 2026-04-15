@@ -1,5 +1,7 @@
 import React from 'react';
 import CallContextDetails from './CallContextDetails';
+import TextContextDetails from './TextContextDetails';
+import VideoContextDetails from './VideoContextDetails';
 
 
 
@@ -16,6 +18,8 @@ const Timeline = () => {
                     </select>
                     <div className='mt-5'>
                         <CallContextDetails></CallContextDetails>
+                        <TextContextDetails></TextContextDetails>
+                        <VideoContextDetails></VideoContextDetails>
                     </div>
                 </div>
             </div>

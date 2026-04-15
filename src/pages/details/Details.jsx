@@ -7,6 +7,9 @@ import { IoArchive } from 'react-icons/io5';
 import { MdDelete } from 'react-icons/md';
 import { Link, useParams } from 'react-router';
 import { CallContext } from '../../components/context/CallContext';
+import callImg from '../../assets/call.png';
+import textImg from '../../assets/text.png';
+import videoImg from '../../assets/video.png';
 
 const itemsPromise = fetch('/data.json').then(res => res.json());
 
@@ -26,8 +29,11 @@ const Details = () => {
 
     // const [call,setCall] = useState([]);
     const {call,setCall} = useContext(CallContext);
+    const {text,setText} = useContext(CallContext);
+    const {video,setVideo} = useContext(CallContext);
 
     const handleCall = () =>{
+        alert("Call is seleted");
         const now = new Date ();
         const month = now.toLocaleString('en-US', {month: 'long'});
         const time = now.toLocaleTimeString();
@@ -37,6 +43,32 @@ const Details = () => {
         }
         // setCall ([...call,expectedItem])
         setCall ([...call,newCall]);
+    }
+
+    const handleText = () =>{
+        alert("Text is seleted");
+        const now = new Date ();
+        const month = now.toLocaleString('en-US', {month: 'long'});
+        const time = now.toLocaleTimeString();
+        const newCall = {
+            ...expectedItem,
+            textTime: `${month} - ${time}`
+        }
+        // setCall ([...call,expectedItem])
+        setText ([...text,newCall]);
+    }
+
+    const handleVideo = () =>{
+        alert("Video is seleted");
+        const now = new Date ();
+        const month = now.toLocaleString('en-US', {month: 'long'});
+        const time = now.toLocaleTimeString();
+        const newCall = {
+            ...expectedItem,
+            videoTime: `${month} - ${time}`
+        }
+        // setCall ([...call,expectedItem])
+        setVideo ([...video,newCall]);
     }
    
     // console.log(call,"Call");
@@ -99,9 +131,9 @@ const Details = () => {
                     <div>
                         <h2 className='text-[#64748B] font-bold mb-5'>Quick Check-In</h2>
                         <div className='grid grid-cols-3 gap-5'>
-                        <button onClick={() => handleCall()} className='btn px-3 py-7 text-[#64748B] flex flex-col items-center'><BiSolidPhoneCall />Call</button>
-                        <button  className='btn px-3 py-7 text-[#64748B] flex flex-col items-center'><BsChatLeftText />Text</button>
-                        <button className='btn px-3 py-7 text-[#64748B] flex flex-col items-center'><FaVideo />Video</button>
+                        <button onClick={() => handleCall()} className='btn px-3 py-7 text-[#64748B] flex flex-col items-center'><img src={callImg} className='w-5' alt="Call image" />Call</button>
+                        <button onClick={() => handleText()} className='btn px-3 py-7 text-[#64748B] flex flex-col items-center'><img src={textImg} className='w-5' alt="Text image" />Text</button>
+                        <button onClick={() => handleVideo()} className='btn px-3 py-7 text-[#64748B] flex flex-col items-center'><img src={videoImg} className='w-5' alt="Video image" />Video</button>
                         </div>
                     </div>
                 </div>
