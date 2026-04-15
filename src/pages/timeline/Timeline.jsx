@@ -6,13 +6,12 @@ import VideoContextDetails from './VideoContextDetails';
 
 
 const Timeline = () => {
-    const [filter, setFilter] = useState('Filter timeline')
+    const [filter, setFilter] = useState('All')
     return (
         <div className='max-w-[80%] mx-auto my-20'>
             <div>
                 <h2 className='text-3xl font-bold mb-3'>Timeline </h2>
                 <select value={filter} onChange={(e) => setFilter(e.target.value)} defaultValue="Pick a color" className="select">
-                    <option disabled={true}>Filter timeline</option>
                     <option value="All">Show All</option>
                     <option value='Call'>Call</option>
                     <option value='Text'>Text</option>
